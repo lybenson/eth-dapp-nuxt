@@ -8,12 +8,12 @@
 
 <script>
 import web3 from '../libs/web3'
-import ProjectList from '../libs/ProjectList'
-import Project from '../libs/Project'
+import ProjectList from '../libs/projectList'
+import Project from '../libs/project'
 
 export default {
   async asyncData () {
-    const addressList = await proj
+    const addressList = await ProjectList
   },
   components: {
   }

@@ -5,12 +5,14 @@
   "author": "lybenson <naivebenson@gmail.com>",
   "private": true,
   "scripts": {
+    "compile": "node scripts/compile.js",
+    "pretest": "npm run compile",
+    "test": "mocha tests/",
+    "deploy": "node scripts/deploy.js",
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "prestart": "npm run build",
+    "start": "nuxt start"
   },
   "dependencies": {
     "config": "^1.30.0",
@@ -18,6 +20,7 @@
     "fs-extra": "^6.0.1",
     "nuxt": "^1.0.0",
     "solc": "^0.4.24",
+    "truffle-hdwallet-provider": "^0.0.3",
     "web3": "1.0.0-beta.34"
   },
   "devDependencies": {
