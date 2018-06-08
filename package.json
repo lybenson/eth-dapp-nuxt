@@ -1,0 +1,32 @@
+{
+  "name": "eth-dapp",
+  "version": "1.0.0",
+  "description": "Dapp for ethereum ",
+  "author": "lybenson <naivebenson@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "config": "^1.30.0",
+    "element-ui": "^2.4.0",
+    "fs-extra": "^6.0.1",
+    "nuxt": "^1.0.0",
+    "solc": "^0.4.24",
+    "web3": "1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  }
+}
