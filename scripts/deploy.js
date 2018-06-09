@@ -14,13 +14,16 @@ const HDWalletProvider = require('truffle-hdwallet-provider')
 
 // 1. 拿到 bytecode
 const contractPath = path.resolve(__dirname, '../compiled/ProjectList.json')
-const { itface, bytecode } = require(contractPath)
-
 console.log(contractPath)
+console.log(typeof require(contractPath))
+const { interface, bytecode } = require(contractPath)
+
+// const interface = contractJSON.interface
+// console.log(contractJSON.interface)
 
 // 2. 配置 provider
 const provider = new HDWalletProvider(
-  'mango april cycle fish lend exist camera list day increase load curve',
+  'govern slogan fever satisfy pill fat already planet they pretty scheme badge',
   'https://rinkeby.infura.io/EI2sp8heRbsKJHppQT89'
 )
 
@@ -34,7 +37,7 @@ const web3 = new Web3(provider)
 
   // 5. 创建合约实例并且部署
   console.time('合约部署耗时')
-  const result = await new web3.eth.Contract(JSON.parse(itface))
+  const result = await new web3.eth.Contract(JSON.parse(interface))
       .deploy({ data: bytecode })
       .send({ from: accounts[0], gas: '5000000' })
   console.timeEnd('合约部署耗时')
